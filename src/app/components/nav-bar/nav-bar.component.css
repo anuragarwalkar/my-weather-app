@@ -1,0 +1,35 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem;
+}
+
+#main-logo{
+    display: flex
+}
+
+#main-logo h2{
+    align-self:center;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+#search{
+    align-self: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    color: #959595;
+    width: 200px;
+    background: url('../../../assets/search_img.png') right no-repeat;
+    background-size: 17%; 
+    border:1px solid #959595;
+    outline: none;
+}
+
+::placeholder {
+    color: #959595;
+  }
+
+.logo-img{
+    height: 50px;
+}

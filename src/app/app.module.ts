@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { WeatherDetailsComponent } from './components/weather-details/weather-details.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { WeatherDaysComponent } from './components/weather-days/weather-days.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     WeatherDetailsComponent,
-    WeatherComponent
+    WeatherComponent,
+    WeatherDaysComponent
   ],
   imports: [
     BrowserModule,

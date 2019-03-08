@@ -1,0 +1,35 @@
+.container{
+    margin-top: 1rem;
+    max-width: 1350px;
+    margin: 1rem auto;
+}
+.day{
+    text-align: center;
+    width: 200px;
+    background: #1c83df;
+    color: #fff;
+    padding: 0.3rem;}
+
+
+#weaather-details{
+    display: flex;
+    width: 200px;
+}
+
+#weather-state img{
+    height: 50px;
+    padding: 0.7rem;
+}
+
+#weather-state h3{
+    padding: 1rem
+}
+
+#weather-forcast #weaather-details:nth-child(odd) {
+    background: #BEBDBD;
+}
+
+#weather-state{
+    display: flex;
+    align-items: center
+}

@@ -1,0 +1,41 @@
+#main-baner{
+  background-image: url('/assets/banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  /* max-width: 100%; */
+  height: 17rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#left-text{
+  
+    /* position: relative;
+    top: 7rem;
+    left:7rem; */
+    align-self: center;
+    font-size: 1.5rem;
+    margin-left: 6rem;
+    color: #fff;
+}
+
+
+#main-baner .weather-time{
+  color: #fff;
+  list-style: none;
+  margin-right: 4rem;
+  font-size:1.2rem; 
+  font-weight: 700;
+  /* position: relative;
+  top:6rem;
+  right: 7rem;
+  font-size: 1.3rem; */
+}
+
+#right-text{
+  align-self: center;
+}
+#left-text .city-text{
+    color:#92d050;
+    font-weight: 400;
+}

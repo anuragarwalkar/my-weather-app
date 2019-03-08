@@ -1,0 +1,61 @@
+.container{
+    max-width: 1100px;
+    margin: auto;
+    box-sizing: border-box; 
+}
+
+.day{
+    display: inline-block;
+    margin: 2rem 0 0.5rem 4rem;
+    border-bottom: 3px solid #00b0f0;
+    font-weight: 700;
+}
+
+#weather-data{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+#weather-data .box{
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    width: 33%;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather-data .box h3{
+    font-size: 2rem;
+}
+
+#weather-data .box p{
+    font-size: 1rem;
+}
+
+
+#weather-data .box h3{
+    color: rgb(0, 176, 240);
+}
+
+#weather-data div:nth-child(even){
+    background: #d9d9d9;
+}
+
+#weather-data div:nth-child(odd){
+    background: #f2f2f2;
+}
+
+#weather-img{
+    background-image:url('/assets/thunder.png');
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-size: 120px;
+    width: 20%;
+}
+
+#weather-details{
+    display: flex;
+}
