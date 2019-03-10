@@ -12,10 +12,10 @@
 body{ font-family: Lato }
 
 /* loader img */
-
 .loader-img{
     display: block;
     margin: 100px auto; 
     height: 200px;
     border-radius: 30%;
 }
+

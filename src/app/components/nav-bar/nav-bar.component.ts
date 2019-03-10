@@ -11,19 +11,24 @@ export class NavBarComponent implements OnInit {
 
   queryValue:string;
   queryResults:Query[];
+  changePlaceholderValue:string = 'Pune';
+  // hideList:boolean = false;
 
   constructor(private weatherService:WeatherService) { }
 
   onLocationSet(queryResult:Query){
       this.weatherService.changeLocation(queryResult.woeid);
         this.queryValue = ''
+        this.changePlaceholderValue = queryResult.title
+        // this.hideList = true;
+        this.queryResults = []
 
   }
 
   onSearch(){
     if(this.queryValue == ''){
       this.queryResults = []
-      console.log('working')
+      // console.log('working')
     }else{
       this.weatherService.searchQuery(this.queryValue).subscribe((res)=>{
         this.queryResults = res 

@@ -1,8 +1,9 @@
-
-
 .day{
     display: inline-block;
     margin: 0.5rem 0 0.3rem 4rem;
+}
+
+.day h1{
     border-bottom: 3px solid #00b0f0;
     font-weight: 700;
 }
@@ -64,6 +65,31 @@
     display: flex;
 }
 
-/* ng-template{
-    margin-top:200px;
-} */
+    
+/* Media Query */
+@media screen and (max-width: 750px){
+    #weather-data{
+        flex-direction: column;
+        width: 100%;
+        align-content: center;
+    }
+
+    #weather-img{
+        display: none;
+    }
+
+    #weather-data .box{
+        width: 60%;
+    }
+
+    .day{
+        display: inline-block;
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .day h1{
+      text-align: center;
+    }
+
+}

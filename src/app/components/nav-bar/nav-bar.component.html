@@ -5,8 +5,8 @@
 </div>
 
 <div class="search-box">
-  <input id="search" (keyup)="onSearch()" [(ngModel)]="queryValue" type="text" placeholder="Search">
-  <ul id="city" *ngFor="let queryResult of queryResults">
+  <input id="search" (keyup)="onSearch()" [(ngModel)]="queryValue" type="search" placeholder="{{changePlaceholderValue}}">
+  <ul id="city" *ngFor="let queryResult of queryResults| slice:0:3">
     <li class="link" (click)="onLocationSet(queryResult)">{{queryResult.title}}</li>
   </ul>
 </div>
