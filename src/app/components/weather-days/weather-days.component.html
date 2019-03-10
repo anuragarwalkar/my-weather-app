@@ -1,46 +1,58 @@
-<div class="container">
+<div class="weater-forcast-days" *ngIf="weatherDetails else loadingGif">
 
-<div id="weather-forcast">
+<div id="weather-days">
+
+<div id="weather-forcast" *ngFor="let weather of weatherDetails">
   <div class="day">
-    <h2>Today</h2>
+    <h2>{{weather.applicable_date | days}}</h2>
   </div>
   <div id="weather-state">
-    <img src="/assets/thunder.png" alt="thunder">
-    <h3>Thunder</h3>
+    <div class="state-img">
+        <img src="https://www.metaweather.com/static/img/weather/{{weather.weather_state_abbr}}.svg" alt="thunder">
+    </div>
+    <div class="state-text">
+    <h3>{{weather.weather_state_name}}</h3>
   </div>
+  </div>
+
   <div id="weaather-details">
     <div class="col-1">
     <p>Min Temp</p>
-    <p>26 C</p>
+    <p>{{weather.min_temp |number: '1.0-0'}}&#176; C</p>
   </div>
   <div class="col-2">
     <p>Max Temp</p>
-    <p>20 C</p>
+    <p>{{weather.max_temp |number: '1.0-0'}}&#176; C</p>
   </div>
   </div>
 
   <div id="weaather-details">
       <div class="col-1">
       <p>Pressure</p>
-      <p>26 C</p>
+      <p>{{weather.air_pressure |number: '1.0-0'}} mb</p>
     </div>
     <div class="col-2">
       <p>Wind Speed</p>
-      <p>20 C</p>
+      <p>{{weather.wind_speed |number: '1.0-0'}} mph</p>
     </div>
     </div>
 
     <div id="weaather-details">
         <div class="col-1">
         <p>Visibility</p>
-        <p>966mb</p>
+        <p>{{weather.visibility |number: '1.0-0'}} miles</p>
       </div>
       <div class="col-2">
         <p>Humidity</p>
-        <p>20 C</p>
+        <p>{{weather.humidity}} %</p>
       </div>
       </div>
 
 </div>
 
 </div>
+</div>
+
+<ng-template #loadingGif>
+    <img src="/assets/giphy.gif" class="loader-img" alt="Loding....">
+  </ng-template>

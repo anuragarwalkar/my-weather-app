@@ -1,7 +1,14 @@
 <nav>
-  <div id="main-logo">
+  <div id="main-logo" style="cursor:pointer;" routerLink="/">
   <img src="assets/Logo.png" class="logo-img" alt="Weather Logo">
   <h2>My Weather</h2>
 </div>
-  <input id="search" type="text" placeholder="Search">
+
+<div class="search-box">
+  <input id="search" (keyup)="onSearch()" [(ngModel)]="queryValue" type="text" placeholder="Search">
+  <ul id="city" *ngFor="let queryResult of queryResults">
+    <li class="link" (click)="onLocationSet(queryResult)">{{queryResult.title}}</li>
+  </ul>
+</div>
 </nav>
+

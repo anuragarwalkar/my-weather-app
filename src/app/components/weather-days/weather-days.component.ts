@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherService } from 'src/app/services/weather.service';
+import { Weather } from 'src/app/models/weather';
 
 @Component({
   selector: 'app-weather-days',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherDaysComponent implements OnInit {
 
-  constructor() { }
+  weatherDetails:Weather
+
+  constructor(private weatherService:WeatherService) { }
+
+  
 
   ngOnInit() {
+
+    this.weatherService.currentLocation.subscribe((location)=>{
+      this.weatherService.getLocationWeatherDetail(location).subscribe((res)=>{
+        this.weatherDetails = res.consolidated_weather
+        // console.log(this.weatherDetails)
+    })
+    })
+
+    
+
+    
   }
 
 }

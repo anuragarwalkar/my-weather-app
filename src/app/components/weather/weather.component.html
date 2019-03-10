@@ -1,15 +1,18 @@
 <div id="main-baner">
+  <div class="left-right-text" *ngIf="weatherDetails">
   <div id="left-text">
-  <h1 class="city-text">Pune</h1>
-  <p class="country-text">India</p>
+  <h1 class="city-text">{{weatherDetails?.title}}</h1>
+  <p class="country-text">{{weatherDetails?.parent.title}}</p>
 </div>
 
 <div id="right-text">
   <ul class="weather-time">
-    <li>Time: 3:45 p.m</li>
-    <li>Sunrise: 6:09 a.m</li>
-    <li>Sunset: 6:02 p.m</li>
+    <li>Time: {{weatherDetails?.time |date:'shortTime'}} </li>
+    <li>Sunrise: {{weatherDetails?.sun_rise |date:'shortTime'}}</li>
+    <li>Sunset: {{weatherDetails?.sun_set |date:'shortTime'}}</li>
   </ul>
 </div>
 </div>
+</div>
+<router-outlet></router-outlet>
 

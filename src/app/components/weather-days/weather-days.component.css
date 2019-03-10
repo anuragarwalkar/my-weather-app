@@ -1,11 +1,15 @@
-.container{
-    margin-top: 1rem;
-    max-width: 1350px;
-    margin: 1rem auto;
+.weater-forcast-days{
+    margin: 2rem auto;
 }
+
+#weather-days {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .day{
     text-align: center;
-    width: 200px;
     background: #1c83df;
     color: #fff;
     padding: 0.3rem;}
@@ -13,7 +17,16 @@
 
 #weaather-details{
     display: flex;
-    width: 200px;
+    padding: 0.5rem;
+    line-height: 1.6rem;
+}
+
+#weaather-details .col-1{
+    width: 50%
+}
+
+#weather-forcast{
+    width: 250px;
 }
 
 #weather-state img{
@@ -21,15 +34,36 @@
     padding: 0.7rem;
 }
 
-#weather-state h3{
-    padding: 1rem
+#weather-state .state-img{
+    width: 50%;
 }
 
-#weather-forcast #weaather-details:nth-child(odd) {
-    background: #BEBDBD;
+/* #weather-state .thunder-img img{
+    display: block;
+    margin: auto;
+} */
+
+#weather-forcast{
+    margin: 0 1.8rem 1.8rem 0;
 }
+
+
+#weather-forcast #weaather-details:nth-child(odd) {
+    background: #f2f2f2;
+}
+
 
 #weather-state{
     display: flex;
-    align-items: center
+    align-items: center;
 }
+
+#weather-state .state-text{
+    color: #7f7f7f;
+
+}
+
+
+
+
+

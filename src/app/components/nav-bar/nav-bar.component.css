@@ -2,6 +2,22 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 1.3rem;
+    height: 50px;
+}
+
+#city{
+    /* display: none; */
+    list-style: none;
+    overflow: auto;
+}
+
+#city li{
+    font-size: 1.2rem;
+    color: #959595;
+    background: #fff;
+    padding: 0.5rem;
+    margin: 0.1rem 0;
+    border:1px solid #959595;
 }
 
 #main-logo{
@@ -20,10 +36,9 @@ nav{
     font-size: 1.3rem;
     color: #959595;
     width: 200px;
-    background: url('../../../assets/search_img.png') right no-repeat;
+    background: url('/assets/search_img.png') right no-repeat;
     background-size: 17%; 
     border:1px solid #959595;
-    outline: none;
 }
 
 ::placeholder {
@@ -32,4 +47,8 @@ nav{
 
 .logo-img{
     height: 50px;
+}
+
+.link{
+    cursor: pointer;
 }
