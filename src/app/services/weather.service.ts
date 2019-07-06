@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs'
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -27,12 +28,12 @@ export class WeatherService {
    }
 
   searchQuery(value:string):Observable<any>{
-    const url = `/api/location/search/?query=${value}`
+    const url = `${environment.url}/api/location/search/?query=${value}`
     return this.http.get(url);
   } 
 
   getLocationWeatherDetail(location:number):Observable<any>{
-    const url = `/api/location/${location}/`;
+    const url = `${environment.url}/api/location/${location}/`;
     return this.http.get(url);
 
   }

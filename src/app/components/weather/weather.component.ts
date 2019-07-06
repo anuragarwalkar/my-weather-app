@@ -11,9 +11,11 @@ export class WeatherComponent implements OnInit {
 
    weatherDetails:{} 
 
-  constructor( private weatherSevice:WeatherService ) { }
+  constructor( private weatherSevice:WeatherService) { }
 
   ngOnInit() {
+
+    
 
     this.weatherSevice.currentLocation.subscribe((location)=>{
       // console.log(location)
