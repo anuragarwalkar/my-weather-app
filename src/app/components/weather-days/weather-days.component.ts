@@ -18,6 +18,7 @@ export class WeatherDaysComponent implements OnInit {
   ngOnInit() {
 
     this.weatherService.currentLocation.subscribe((location)=>{
+      this.weatherDetails = null;
       this.weatherService.getLocationWeatherDetail(location).subscribe((res)=>{
         this.weatherDetails = res.consolidated_weather
         // console.log(this.weatherDetails)

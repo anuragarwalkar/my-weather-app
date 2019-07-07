@@ -8,7 +8,7 @@ import { Weather } from 'src/app/models/weather';
   styleUrls: ['./weather-details.component.css']
 })
 export class WeatherDetailsComponent implements OnInit {
-  weatherDetails:Weather
+  weatherDetails:Weather;
   weatherStates:string
  
   
@@ -17,10 +17,10 @@ export class WeatherDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.weatherService.currentLocation.subscribe((location)=>{
+      this.weatherDetails = null;
       this.weatherService.getLocationWeatherDetail(location).subscribe((res)=>{
         this.weatherDetails = res.consolidated_weather[0]
         this.weatherStates = `https://www.metaweather.com/static/img/weather/${this.weatherDetails.weather_state_abbr}.svg`
-        // console.log(this.weatherDetails)
       })
     })
     
