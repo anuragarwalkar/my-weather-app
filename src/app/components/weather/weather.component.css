@@ -43,3 +43,20 @@
     color:#92d050;
     font-weight: 400;
 }
+
+
+@media screen and (max-width:500px){
+  #main-baner{
+    height: 10rem;
+  }
+
+  #left-text{
+    font-size: 1.2rem;
+    margin-left: 3rem;
+  }
+
+  .weather-time{
+  margin-right: 3rem;
+  font-size:1.1rem; 
+  }
+}
