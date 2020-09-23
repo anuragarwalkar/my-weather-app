@@ -33,7 +33,7 @@ export class WeatherService {
 
     const url = `${environment.url}/api/location/search/?query=${value}`
     return this.http.get(url);
-  } 
+  }
 
   getLocationWeatherDetail(location:number):Observable<any>{
     const headers = new Headers();
