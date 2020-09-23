@@ -25,8 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -99,6 +98,16 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://anuragarwalkar.github.io/my-weather-app/",
+            "repo": "https://github.com/anuragarwalkar/my-weather-app.git",
+            "name": "Anurag Arwalkar",
+            "email": "anuragarwalkar@gmail.com",
+            "noSilent": true
           }
         }
       }

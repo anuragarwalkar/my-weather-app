@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs'
 import { environment } from 'src/environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -18,6 +17,7 @@ export class WeatherService {
   currentLocation = this.WeatherLocation.asObservable();
 
 
+
   changeLocation(location:number){
     this.WeatherLocation.next(location)
     // this.defaultLocation = location
@@ -28,11 +28,17 @@ export class WeatherService {
    }
 
   searchQuery(value:string):Observable<any>{
+    const headers = new Headers();
+    headers.append('x-requested-with', 'XMLHTTPREQUEST');
+
     const url = `${environment.url}/api/location/search/?query=${value}`
     return this.http.get(url);
   } 
 
   getLocationWeatherDetail(location:number):Observable<any>{
+    const headers = new Headers();
+    headers.append('x-requested-with', 'XMLHTTPREQUEST');
+
     const url = `${environment.url}/api/location/${location}/`;
     return this.http.get(url);
 
