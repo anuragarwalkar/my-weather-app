@@ -2,10 +2,11 @@
 
 I have created this weather app using meta weather api with no external css library
 
-## Continuous Intigration & Continuous Delivery with GitHub Actions
+Request Access First from this before opening Live [Req-Access](https://cors-anywhere.herokuapp.com/corsdemo)
 
-## Live URL
-"https://anuragarwalkar.github.io/my-weather-app/"
+Open App From [here](https://anuragarwalkar.github.io/my-weather-app/)
+
+## Continuous Intigration & Continuous Delivery with GitHub Actions
 
 ![image](https://user-images.githubusercontent.com/40962778/94052606-cb21e600-fdf6-11ea-8e02-e3084f46c5c6.png)
 ![image](https://user-images.githubusercontent.com/40962778/94057647-88174100-fdfd-11ea-8f71-cc8ff668afcf.png)
